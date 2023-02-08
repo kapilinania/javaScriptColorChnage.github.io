@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #body{
+        background: #123a45;
+       } 
+       #main{
+        color: white;
+       }
+       .btn{
+        padding: 20px 10px 20px 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       }
+       *:focus{
+        outline: none;
+       }
+       header{
+        width: 50%;
+        border: 0px solid red;
+        margin: 100px auto;
+       }
+       #main{
+        text-align: center;
+        font-size: 30px;
+        font-family: sans-serif;
+       }
+    </style>   
+</head>
+<!-- used id in body bcoz we want chnage color complete page -->
+<body id="body">
+    <!-- onclick funciton is used -->
+    <header>
+        <div id="main">#74B6F6</div>
+        <form action="">
+            <button type="button" value="submit" onclick="kapil()" class="btn">Click me color change</button>
+        </form>
+    </header>
+
+    <!-- JavaScript Code is here -->
+    <script>
+      function kapil(){
+        let a,b;
+        a="0123456789ABCDEF"
+        b="#";
+        // for loop is used because we want 6 digit like #45AB12 soo
+        for(let i=1;i<=6;i++){
+            b=b+a[Math.floor(Math.random() * 16)];
+            
+        }
+        document.getElementById("body").style.background = b;
+        document.getElementById("main").innerHTML = b;
+        console.log(b);
+      }
+    </script>
+
+</body>
+
+</html>
